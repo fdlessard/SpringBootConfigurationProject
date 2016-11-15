@@ -1,6 +1,6 @@
-package io.fdlessard.codebites.configurationexample.impl;
+package io.fdlessard.codebites.configurationexamples.impl;
 
-import io.fdlessard.codebites.configurationexample.SomeSortOfService;
+import io.fdlessard.codebites.configurationexamples.SomeSortOfService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,6 +14,7 @@ public class SomeSortOfServiceImplWithValue implements SomeSortOfService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SomeSortOfServiceImplWithValue.class);
 
+    // SomeSortOfService object specific properties
     @Value("${SomeSortOfService.version}")
     private String version;
 
@@ -26,6 +27,9 @@ public class SomeSortOfServiceImplWithValue implements SomeSortOfService {
     @Value("${SomeSortOfService.path}")
     private String path;
 
+
+
+    // Message specific properties
     @Value("${message.info.user}")
     private String userInfoMsg;
 
@@ -47,10 +51,16 @@ public class SomeSortOfServiceImplWithValue implements SomeSortOfService {
 
     public void doSomething() {
 
+        LOGGER.info("SomeSortOfServiceImplWithValue.doSomething()");
+
+        // SomeSortOfService object specific properties
         LOGGER.info("SomeSortOfService.version = {}", version);
         LOGGER.info("SomeSortOfService.scope = {}", scope);
         LOGGER.info("SomeSortOfService.url = {}", url);
         LOGGER.info("SomeSortOfService.path = {}", path);
+
+
+        // Message specific properties
 
         LOGGER.info("message.info.user = {}", userInfoMsg);
         LOGGER.info("message.info.config = {}", configInfoMsg);

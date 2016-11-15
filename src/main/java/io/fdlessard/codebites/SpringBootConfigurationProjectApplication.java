@@ -6,6 +6,8 @@ import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
 @PropertySource("classpath:application.properties")
+
+@PropertySource("classpath:someSortOfService.properties")
 @PropertySource("classpath:message.properties")
 
 @PropertySource("classpath:mapFormat.properties")

@@ -1,4 +1,4 @@
-package io.fdlessard.codebites.configurationexample.properties;
+package io.fdlessard.codebites.configurationexamples.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
