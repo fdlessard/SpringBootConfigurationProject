@@ -5,8 +5,24 @@
 
 # SpringBootConfigurationProject
 
-3 ways to handle files properties in SpringBoot
+Here we look at 3 different ways to handle files properties in SpringBoot
 
 1. @Value injection (see SomeSortOfServiceImplWithValue class)
 2.  @Value Map injection - SPEL hack (see SomeSortOfServiceImplWithValueMap class)
 3.  @ConfigurationProperties injection (see SomeSortOfServiceImplWithPropertyObject class)
+
+
+# Best practices for naming properties
+
+1. Start the property name with a prefix indicating were the property is used (if used in a single file)
+   SomeSortOfService.property1=
+   SomeSortOfService.property2=
+   ...
+2. Group generic error messages in one property file and prefix the name of the property with "message"
+
+  message.info.property1 ="An info message"
+  message.info.property2 ="Another info message"
+  ...
+  message.warning.property1 ="A warning  message"
+  ...
+  message.error.property1 ="An error message"
