@@ -14,15 +14,17 @@ Here we look at 3 different ways to handle files properties in SpringBoot
 
 # Best practices for naming properties
 
-1. Start the property name with a prefix indicating were the property is used (if used in a single file)
-   SomeSortOfService.property1=
-   SomeSortOfService.property2=
-   ...
-2. Group generic error messages in one property file and prefix the name of the property with "message"
+1. Start the property name with a prefix indicating were the property is used (if used in a single file)  
+   SomeSortOfService.property1=  
+   SomeSortOfService.property2=  
+   ...  
+     
+2. Group generic error messages in one property file and prefix the name of the property with "message"  
 
-  message.info.property1 ="An info message"
-  message.info.property2 ="Another info message"
-  ...
-  message.warning.property1 ="A warning  message"
-  ...
-  message.error.property1 ="An error message"
+  message.info.property1 ="An info message"  
+  message.info.property2 ="Another info message"  
+  ...  
+  message.warning.property1 ="A warning  message"  
+  ...  
+  message.error.property1 ="An error message"  
+  
