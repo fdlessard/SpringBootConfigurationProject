@@ -36,8 +36,23 @@
   message.warning.property1 ="A warning  message"  
   ...  
   message.error.property1 ="An error message"  
-  
-4. Respect the java property file contract (try to keep a simple redable format)  
+
+
+4. Groups should be consecutives in the property key  
+
+   Try to avoid this:   
+      
+      someclass.notNull.message  
+      someclass.divideByZero.message  
+ 
+ 
+   Try to do this instead:  
+      
+      someclass.message.notNull  
+      someclass.message.divideByZero  
+
+
+5. Respect the java property file contract (try to keep a simple redable format)  
 
 
    \# Simple line format  
@@ -46,13 +61,14 @@
    \# Coma separated properties acceptable  
    propertyLevel1.propretyLevel2=blabla, blablabla2   
    
- Try to avoid complicated formats. Why ?  
+   Try to avoid complicated formats. Why ?  
  
      - Difficult to read, confusing,  
      - Difficult to maintain,  
      - Complicates refactoring,  
      - Error prone,  
-     - Can't be read by core java class,  
+     - If someone else want's to use one of your properties then they are force to also use SPEL,  
+     - Can't be read by core java classes,  
      - Some IDE have plugins to manipulate properties and may not support complex property structures,  
      - Not supported by Spring @ConfigurationProperties,  
      - It's uncommon in java,  
