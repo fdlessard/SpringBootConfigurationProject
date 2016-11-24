@@ -1,44 +1,44 @@
 # Best practices for properties
 
-1. Start the property name with a prefix indicating the class where the property is used (if used in a single class).  
+**1. Start the property name with a prefix indicating the class where the property is used (if used in a single class).**  
+  
+      SomeSortOfService.property1= blablabla  
+      SomeSortOfService.property2= blablabla
+      ...  
      
-   SomeSortOfService.property1=  
-   SomeSortOfService.property2=  
-   ...  
      
-     
-2. Properties used in a class should be defined together in the same file (if used in a single class).  
+**2. Properties used in a class should be defined together in the same file (if used in a single class).**  
   
    Try to avoid this :  
    
    
-    property-file.properties 
-       SomeSortOfService.property1=  
+    _property-file.properties_ 
+       SomeSortOfService.property1= blablabla  
        
-    another-property-file.properties 
-       SomeSortOfService.property2=   
+    _another-property-file.properties_   
+       SomeSortOfService.property2= blablabla  
        
        
    Try to do this instead:  
    
-       property-file.properties 
-       SomeSortOfService.property1=  
-       SomeSortOfService.property2=  
+       _property-file.properties_ 
+       SomeSortOfService.property1= blablabla 
+       SomeSortOfService.property2= blablabla 
        
      
-3. Try to group generic error messages in one property file and prefix the name of the property with "message" and subgroups   
-   (if a message is used in more than one file)  
+**3.Try to group generic error messages in one property file and prefix the name of the property with "message" and subgroups
+   (if a message is used in more than one file)**  
 
   
-  message.info.property1 ="An info message"  
-  message.info.property2 ="Another info message"  
-  ...  
-  message.warning.property1 ="A warning  message"  
-  ...  
-  message.error.property1 ="An error message"  
+     message.info.property1 ="An info message"  
+     message.info.property2 ="Another info message"  
+     ...  
+     message.warning.property1 ="A warning  message"  
+     ...  
+     message.error.property1 ="An error message"  
 
 
-4. Groups should be consecutives in the property key  
+**4. Groups should be consecutives in the property key**  
 
    Try to avoid this:   
       
@@ -52,7 +52,7 @@
       someclass.message.divideByZero  
 
 
-5. Respect the java property file contract (try to keep a simple redable format)  
+**5. Respect the java property file contract (try to keep a simple redable format)**  
 
 
    \# Simple line format  
