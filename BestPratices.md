@@ -30,36 +30,36 @@
    (if a message is used in more than one file)**  
 
   
-      message.info.property1 ="An info message"  
-      message.info.property2 ="Another info message"  
+      message.info.property1= An info message  
+      message.info.property2= Another info message  
       ...  
-      message.warning.property1 ="A warning  message"  
+      message.warning.property1= A warning  message  
       ...  
-      message.error.property1 ="An error message"  
+      message.error.property1= An error message  
 
 
 **4.  Groups should be consecutives in the property key**  
 
    Try to avoid this:   
       
-      SomeClass.notNull.message  
-      SomeClass.divideByZero.message  
+      SomeClass.notNull.message= blablabla 
+      SomeClass.divideByZero.message= blablabla    
  
  
    Try to do this instead:  
       
-      SomeClassName.message.notNull  
-      SomeClassName.message.divideByZero  
+      SomeClassName.message.notNull= blablabla    
+      SomeClassName.message.divideByZero= blablabla    
 
 
 **5.  Respect the java property file contract (try to keep a simple readable format)**  
 
 
       # Simple line format  
-      propertyLevel1.propretyLevel2=blabla  
+      propertyLevel1.propretyLevel2= blablabla    
    
       # Coma separated properties acceptable  
-      propertyLevel1.propretyLevel2=blabla, blablabla2   
+      propertyLevel1.propretyLevel2= blablabla1, blablabla2     
    
    Try to avoid complicated formats. Why ?  
  
