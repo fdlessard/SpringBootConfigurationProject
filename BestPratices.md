@@ -1,14 +1,14 @@
 # Best practices for properties
 
 1. Start the property name with a prefix indicating the class where the property is used (if used in a single class).  
-   
+     
    SomeSortOfService.property1=  
    SomeSortOfService.property2=  
    ...  
      
      
 2. Properties used in a class should be defined together in the same file (if used in a single class).  
-
+  
    Try to avoid this :  
    
    
@@ -29,7 +29,7 @@
 3. Try to group generic error messages in one property file and prefix the name of the property with "message" and subgroups   
    (if a message is used in more than one file)  
 
-
+  
   message.info.property1 ="An info message"  
   message.info.property2 ="Another info message"  
   ...  
