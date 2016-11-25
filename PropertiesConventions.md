@@ -1,4 +1,4 @@
-# Best practices for properties
+# Conventions for properties files and properties names
 
 **1.  Start the property name with a prefix indicating the class where the property is used (if used in a single class).**  
   
